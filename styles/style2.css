@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Imperial+Script&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --vermelho: #e61b1b;
+  --rosa: #ea35b2;
+  --violeta: #b044e5;
+  --roxo: #5e44e1;
+  --branco: #ffffff;
+  --glass: rgba(255, 255, 255, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.4)),
+    url("../src/assets/imagens/camera.jpg") no-repeat center / cover;
+
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Kedebideri", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 330px;
+  padding: 28px 22px;
+
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+  border: 1px solid var(--glass);
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.logo-wrapper {
+  width: 140px;
+  height: 140px;
+  padding: 4px;
+  border-radius: 50%;
+
+  background: linear-gradient(
+    125deg,
+    var(--vermelho),
+    var(--rosa),
+    var(--violeta),
+    var(--roxo)
+  );
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "Imperial Script", cursive;
+  color: var(--branco);
+  font-size: 2.6rem;
+  margin: 14px 0 0;
+
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+p {
+  font-family: "Kedebideri", sans-serif;
+  font-size: 1.3rem;
+  margin: 6px 0 0;
+  color: whitesmoke;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+}
+
+button {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 10px 0;
+
+  border: none;
+  border-radius: 16px;
+
+  background: var(--glass);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.grid-icon {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+button:hover,
+button:active,
+button:focus-visible {
+  background: linear-gradient(
+    125deg,
+    var(--vermelho),
+    var(--rosa),
+    var(--violeta),
+    var(--roxo)
+  );
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+button:hover {
+  transform: translateY(-3px);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+.whatsapp-link {
+  width: 100%;
+  text-decoration: none;
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .logo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+}

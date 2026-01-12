@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=MonteCarlo&family=Passions+Conflict&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kedebideri:wght@400;500;600;700;800;900&display=swap");
+
+html {
+  font-size: 17px;
+  font-family: "Kedebideri", sans-serif;
+}
+body {
+  /*
+  background-image: url("socialmedia.jpg");
+  background-size: cover;  cobre a tela inteira 
+  background-position: center;  centraliza a imagem 
+  background-repeat: no-repeat; evita repetição 
+  */
+  background-image: url("camera.jpg");
+  background-size: 270%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.logo {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cabecalho__container {
+  width: 300px;
+  height: 120px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px 10px;
+}
+h1 {
+  margin-bottom: 2px;
+  font-size: 2rem;
+  color: whitesmoke;
+}
+p {
+  font-family: "Passions Conflict", cursive;
+  font-size: 3rem;
+  margin-top: 5px;
+  font-weight: 500;
+  color: whitesmoke;
+}
+.container {
+  /*background: rgba(128, 128, 128, 0);*/
+
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  /*background-color: rgba(109, 109, 109, 0.198);*/
+  border-radius: 8px;
+  padding: 10px;
+}
+button {
+  width: 100%;
+  padding: 7px;
+  margin: 10px;
+  border-radius: 8px;
+  border: solid 1px transparent;
+  font-family: "Kedebideri", sans-serif;
+  font-weight: 500;
+  background-color: rgba(240, 248, 255, 0.62);
+}
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 8px;
+  display: inline-block;
+  margin-right: 10px;
+}
+.grid-icon {
+  display: grid;
+  grid-template-columns: 10px 1fr; /* coluna do ícone fixa, texto ocupa o resto */
+  column-gap: 12px;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.grid-icon .icon img {
+  width: 20px;
+  height: 20px;
+}
+.botao1:hover {
+  background-size: 200%; /* zoom ao passar o mouse */
+  background-position: center;
+}
+
+@media (min-width: 768px) and (max-width: 600px) {
+}
