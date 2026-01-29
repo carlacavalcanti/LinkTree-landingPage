@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --vermelho: #e61b1b;
+  --rosa: #ea35b2;
+  --violeta: #b044e5;
+  --roxo: #5e44e1;
+  --bg-primary: #0a0720;
+  --bg-secondary: #1a1435;
+  --bg-accent: #241e47;
+  --text-primary: #f7e2e2;
+  --text-secondary: rgba(247, 226, 226, 0.8);
+  --accent-pink: rgba(255, 56, 92, 0.25);
+  --accent-purple: rgba(187, 45, 255, 0.25);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --card-bg: rgba(26, 20, 53, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
