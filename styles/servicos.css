@@ -1,26 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
-:root {
-  --vermelho: #e61b1b;
-  --rosa: #ea35b2;
-  --violeta: #b044e5;
-  --roxo: #5e44e1;
-  --bg-primary: #0a0720;
-  --bg-secondary: #1a1435;
-  --bg-accent: #241e47;
-  --text-primary: #f7e2e2;
-  --text-secondary: rgba(247, 226, 226, 0.8);
-  --accent-pink: rgba(255, 56, 92, 0.25);
-  --accent-purple: rgba(187, 45, 255, 0.25);
-  --border-color: rgba(255, 255, 255, 0.08);
-  --card-bg: rgba(26, 20, 53, 0.6);
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url("./styleGlobal.css");
 
 html {
   scroll-behavior: smooth;
@@ -32,11 +10,8 @@ body {
   min-height: 100vh;
   width: 100%;
   background: var(--bg-primary);
-  background-image: radial-gradient(
-      at 0% 0%,
-      var(--bg-secondary) 0px,
-      transparent 50%
-    ),
+  background-image:
+    radial-gradient(at 0% 0%, var(--bg-secondary) 0px, transparent 50%),
     radial-gradient(at 100% 100%, var(--bg-accent) 0px, transparent 50%);
   background-attachment: fixed;
   font-family: "Inter", "Roboto", "Lato", sans-serif;
@@ -119,9 +94,13 @@ li::before {
     var(--violeta)
   );
 
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
   mask-composite: exclude;
 
   pointer-events: none;
@@ -204,7 +183,9 @@ h2 {
   -webkit-backdrop-filter: blur(20px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(187, 45, 255, 0.2),
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(187, 45, 255, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   position: relative;
@@ -228,7 +209,9 @@ h2 {
 .txt__apoio:hover {
   border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(187, 45, 255, 0.3),
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(187, 45, 255, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
@@ -261,9 +244,13 @@ h2 {
     var(--rosa),
     var(--violeta)
   );
-  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
   mask-composite: exclude;
   pointer-events: none;
   z-index: 1;
@@ -276,7 +263,9 @@ h2 {
   border-radius: 16px;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(187, 45, 255, 0.2),
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 40px rgba(187, 45, 255, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
   position: relative;
@@ -542,6 +531,11 @@ h2 {
     margin-top: 60px;
     border-radius: 12px;
   }
+
+  #prev,
+  #next {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -574,7 +568,7 @@ h2 {
     align-items: center;
     gap: 24px;
   }
-  
+
   .container__text--apoio .img__wrapper {
     align-self: center;
   }
