@@ -208,7 +208,7 @@ body {
   max-width: 100px;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 418px) {
   .icons .max {
     display: none;
   }
