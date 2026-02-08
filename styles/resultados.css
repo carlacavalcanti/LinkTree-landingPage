@@ -22,7 +22,6 @@ body {
 
 .imagens {
   display: flex;
-
   gap: 24px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -231,7 +230,7 @@ body {
   border-radius: inherit;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 768px) {
   .arrow.next,
   .arrow.left {
     display: none;

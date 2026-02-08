@@ -155,6 +155,8 @@ body {
   max-width: 600px;
   margin-left: 24px;
   text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .card2::before,
@@ -235,5 +237,8 @@ body {
   }
   .resultados {
     max-width: 190px;
+  }
+  .flex p {
+    margin: 0 auto;
   }
 }

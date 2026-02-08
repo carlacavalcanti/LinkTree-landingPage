@@ -31,7 +31,7 @@ body {
 .container {
   width: 100%;
   max-width: 330px;
-  padding: 28px 22px;
+  padding: 22px 22px;
 
   background: var(--glass);
   backdrop-filter: blur(14px);
