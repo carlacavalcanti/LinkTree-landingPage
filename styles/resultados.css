@@ -1,0 +1,239 @@
+@import url("./styleGlobal.css");
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-primary);
+  background-image:
+    radial-gradient(at 0% 0%, var(--bg-secondary) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--bg-accent) 0px, transparent 50%);
+  background-attachment: fixed;
+  font-family: "Inter", "Roboto", "Lato", sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.headline {
+  text-align: center;
+  padding: 10px;
+}
+
+.imagens {
+  display: flex;
+
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-left: 24px;
+  padding-right: 24px;
+  text-align: center;
+}
+
+.imagens img {
+  flex: 0 0 auto;
+  width: 200px;
+}
+.carrousel {
+  position: relative;
+}
+.imagens {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 16px;
+
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.imagens::-webkit-scrollbar {
+  display: none;
+}
+
+.imagens img {
+  flex: 0 0 auto;
+  width: 200px;
+  scroll-snap-align: start;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.left {
+  left: 8px;
+}
+
+.arrow.next {
+  right: 8px;
+}
+
+.container h1 {
+  font-size: clamp(1.5rem, 0.607rem + 2.381vw, 2.75rem);
+  margin-bottom: 25px;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-cliente img {
+  width: clamp(17rem, 14.143rem + 7.619vw, 21rem);
+  margin: 15px;
+  border-radius: 8px;
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.conteudo p {
+  font-size: clamp(1.1rem, 0.6rem + 1.333vw, 1.8rem);
+  position: relative;
+}
+.subheadline,
+.descricao {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.descricao::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 20px;
+
+  background: linear-gradient(
+    90deg,
+    var(--vermelho),
+    var(--rosa),
+    var(--violeta)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+.subheadline {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 56, 92, 0.5),
+    rgba(187, 45, 255, 0.5)
+  );
+
+  border-radius: 8px;
+}
+
+.link {
+  all: unset;
+  font-size: clamp(0.9rem, 0.686rem + 0.571vw, 1.2rem);
+  width: clamp(18rem, 8.714rem + 24.762vw, 31rem);
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(
+    90deg,
+    var(--vermelho),
+    var(--rosa),
+    var(--violeta)
+  );
+  border: none;
+  color: whitesmoke;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.link img {
+  margin-right: 5px;
+  margin-bottom: 3px;
+}
+.gradient-border {
+  position: relative;
+  display: inline-block;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    90deg,
+    var(--vermelho),
+    var(--rosa),
+    var(--violeta)
+  );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+.gradient-border img {
+  display: block;
+  border-radius: inherit;
+}
+
+@media (max-width: 376px) {
+  .arrow.next,
+  .arrow.left {
+    display: none;
+  }
+}
