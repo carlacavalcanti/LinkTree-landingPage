@@ -441,8 +441,26 @@ h2 {
     var(--violeta)
   );
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-  transition: all 0.3s ease;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(var(--rosa-rgb), 0.6),
+    0 0 36px rgba(var(--violeta-rgb), 0.5);
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .cta__agendamento a:hover {

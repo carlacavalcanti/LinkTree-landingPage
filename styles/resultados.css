@@ -186,7 +186,28 @@ body {
   color: whitesmoke;
   border-radius: 8px;
   cursor: pointer;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(var(--rosa-rgb), 0.6),
+    0 0 36px rgba(var(--violeta-rgb), 0.5);
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .link img {
   margin-right: 5px;
   margin-bottom: 3px;
@@ -230,7 +251,7 @@ body {
   border-radius: inherit;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .arrow.next,
   .arrow.left {
     display: none;

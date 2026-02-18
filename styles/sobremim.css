@@ -214,6 +214,9 @@ body {
   padding: 13px;
   border-radius: 8px;
   border: none;
+  color: whitesmoke;
+  font-size: clamp(1rem, 0.827rem + 0.748vw, 1.5rem);
+
   background: linear-gradient(
     125deg,
     var(--vermelho),
@@ -221,12 +224,28 @@ body {
     var(--violeta),
     var(--roxo)
   );
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
-  color: whitesmoke;
-  font-size: clamp(1rem, 0.827rem + 0.748vw, 1.5rem);
-  cursor: pointer;
-}
 
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(var(--rosa-rgb), 0.6),
+    0 0 36px rgba(var(--violeta-rgb), 0.5);
+  cursor: pointer;
+  animation: float 3s ease-in-out infinite;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 @media (max-width: 418px) {
   .icons .max {
     display: none;
