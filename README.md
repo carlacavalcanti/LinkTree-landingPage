@@ -2,9 +2,9 @@ LinkTree-landingPage
 
 Uma landing page estilo LinkTree, criada com HTML, CSS e JavaScript. O objetivo desse projeto é oferecer uma página de “link-in-bio” personalizada, leve e responsiva, que pode ser usada para centralizar seus links e informações pessoais ou profissionais.
 
-🚀 Demonstração
+ Demonstração
 
- [ ](https://barbara-ellen-linktree.vercel.app/)
+[ [ ](https://barbara-ellen-linktree.vercel.app/)](https://barbara-ellen-linktree.vercel.app/)
 
 
   Sobre o Projeto
